@@ -4,7 +4,7 @@ This is the repository that we use to host some public docker images for utility
 <details>
   <summary>
     
-  ### mpileup2matrix &#x1F4D9; 
+  ## mpileup2matrix &#x1F4D9; 
   
   </summary>
   
@@ -13,7 +13,7 @@ This is the repository that we use to host some public docker images for utility
   
   ### How to run it?
   
-    Install docker (if you haven't done it) [link to installation page](https://docs.docker.com/engine/install/)
+  Install docker (if you haven't done it) [link to installation page](https://docs.docker.com/engine/install/)
     
     2. Install git (if you haven't done it)
     
