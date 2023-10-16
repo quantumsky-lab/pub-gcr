@@ -134,8 +134,8 @@ This is the repository that we use to host some public docker images for utility
 
   It should take <1 min to run, and you will get the results in:
 
-  * `INIP_test.mpileup`
-  * `INIP_test.cov`
-  * `INIP_test.indel`
+  * `INIP_test.mpileup` This is the mpileup file built from blastn results
+  * `INIP_test.cov` This is the pandas tsv file with coverage information on per base basis
+  * `INIP_test.indel` This is the pandas tsv file with indel rate information on per base basis
  
 </details>
