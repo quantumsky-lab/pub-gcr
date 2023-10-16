@@ -45,6 +45,18 @@ This is the repository that we use to host some public docker images for utility
     docker buildx build --platform linux/amd64 -t mpileup2matrix .
   ```
 
+  It will take a few minutes to build, once it's done, you can see it by running:
+
+  ```bash
+    docker image list
+  ```
+
+  And you will see something like this:
+
+    REPOSITORY                           TAG       IMAGE ID       CREATED             SIZE
+    gcr.io/skylab/mpileup2matrix         latest    8acf399e6c65   45 minutes ago      1.99GB
+    mpileup2matrix                       latest    8acf399e6c65   45 minutes ago      1.99GB
+  
   ### How to run it?
 
   You can get the helper information by running:
@@ -102,12 +114,24 @@ This is the repository that we use to host some public docker images for utility
       
   `INIP.fa` is the reference sequence in fasta format. `INIP_samples.txt` is a plain text file that contains the `*.fastq` files, one file per line. 
 
-  The `data` folder, is where all the raw `*.fastq` files are stored. 
+  The `data` folder is where all the raw `*.fastq` files are stored. 
 
   Note that these files are on your local drive. To run the docker image, we will use the `-v` option in docker to mount the local directory to become a virtual directory on the container. The way to do it is:
 
   ```bash
     docker run --rm -v $PWD:/root/data mpileup2matrix [options]
   ```
+
+  In this example, you will run:
+
+  ```bash
+    docker run --rm -v $PWD:/root/data mpileup2matrix -i data/test/INIP_samples.txt -r data/test/INIP.fa -k -o data/test/INIP_test -d data/test/data/
+  ```
+
+  It should take <1 min to run, and you will get the results in:
+
+    - `INIP_test.mpileup`
+    - `INIP_test_cov.matrix`
+    - `INIP_test_ind.matrix`
  
 </details>
