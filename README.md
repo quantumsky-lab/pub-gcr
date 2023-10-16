@@ -80,6 +80,8 @@ This is the repository that we use to host some public docker images for utility
       --homopolymer HOMOPOLYMER
                             Homopolymer length threshold
       --min-map MIN_MAP     Mininum match length threshold
+
+  Please follow the example shown below to learn how to run the image.
   
   ### Example
 
@@ -97,6 +99,14 @@ This is the repository that we use to host some public docker images for utility
       
       1 directory, 7 files
       
-    `INIP.fa` is the reference sequence in fasta format. `INIP_samples
+    `INIP.fa` is the reference sequence in fasta format. `INIP_samples.txt` is a plain text file that contains the `*.fastq` files, one file per line. 
+
+    The `data` folder, is where all the raw `*.fastq` files are stored. 
+
+    Note that these files are on your local drive. To run the docker image, we will use the `-v` option in docker to mount the local directory to become a virtual directory on the container. The way to do it is:
+
+    ```bash
+      docker run --rm -v $PWD:/root/data mpileup2matrix [options]
+    ```
  
 </details>
