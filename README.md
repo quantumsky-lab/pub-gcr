@@ -10,8 +10,11 @@ This is the repository that we use to host some public docker images for utility
   ### How to run it?
   
     1. Install docker (if you haven't done it) [link to installation page](https://docs.docker.com/engine/install/)
+    
     2. Install git (if you haven't done it)
+    
     3. Run `git clone` of this repository:
        ```bash
        git clone 
+       
 </details>
