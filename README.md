@@ -23,6 +23,10 @@ This is the repository that we use to host some public docker images for utility
   Run `git clone` of this repository:
        
   ```bash
-    git clone 
+    gh repo clone quantumsky-lab/pub-gcr
+
+  or
+  ```bash
+    git clone https://
        
 </details>
