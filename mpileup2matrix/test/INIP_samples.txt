@@ -1,0 +1,4 @@
+B2_02.fastq
+B5_05.fastq
+B8_08.fastq
+B11_11.fastq
