@@ -24,21 +24,25 @@ This is the repository that we use to host some public docker images for utility
        
   ```bash
     gh repo clone quantumsky-lab/pub-gcr
+  ```
 
   or
 
   ```bash
     git clone https://github.com/quantumsky-lab/pub-gcr.git
+  ```
 
   <b>Step 4</b>
   Use `cd` to nagivate to `pub-gcr/mpileup2matrix` and run:
 
   ```bash
     docker build -t mpileup2matrix .
+  ```
 
   If you are using an Apple Silicon device (such as M1/2 chips), then you should run:
 
   ```bash
     docker buildx build --platform linux/amd64 -t mpileup2matrix .
-       
+  ```
+ 
 </details>
