@@ -14,12 +14,15 @@ This is the repository that we use to host some public docker images for utility
   ### How to install it?
   
   <b>Step 1</b>
+  
   Install docker (if you haven't done it) [link to installation page](https://docs.docker.com/engine/install/)
     
   <b>Step 2</b>
+  
   Install git (if you haven't done it) [link to installation page](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop)
 
   <b>Step 3</b>
+  
   Run `git clone` of this repository:
        
   ```bash
@@ -33,6 +36,7 @@ This is the repository that we use to host some public docker images for utility
   ```
 
   <b>Step 4</b>
+  
   Use `cd` to nagivate to `pub-gcr/mpileup2matrix` and run:
 
   ```bash
