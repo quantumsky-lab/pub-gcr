@@ -22,28 +22,29 @@ This is the repository that we use to host some public docker images for utility
   <b>Step 3</b>
   Run `git clone` of this repository:
        
-    ```bash
-      gh repo clone quantumsky-lab/pub-gcr
-    ```
+  ```bash
+    gh repo clone quantumsky-lab/pub-gcr
+  ```
 
   or
 
-    ```bash
-      git clone https://github.com/quantumsky-lab/pub-gcr.git
-    ```
+  ```bash
+    git clone https://github.com/quantumsky-lab/pub-gcr.git
+  ```
 
   <b>Step 4</b>
   Use `cd` to nagivate to `pub-gcr/mpileup2matrix` and run:
 
-    ```bash
-      docker build -t mpileup2matrix .
-    ```
+  ```bash
+    docker build -t mpileup2matrix .
+  ```
 
   If you are using an Apple Silicon device (such as M1/2 chips), then you should run:
 
-    ```bash
-      docker buildx build --platform linux/amd64 -t mpileup2matrix .
-    ```
+  ```bash
+    docker buildx build --platform linux/amd64 -t mpileup2matrix .
+  ```
+
   ### How to run it?
 
   You can get the helper information by running:
@@ -99,14 +100,14 @@ This is the repository that we use to host some public docker images for utility
       
       1 directory, 7 files
       
-    `INIP.fa` is the reference sequence in fasta format. `INIP_samples.txt` is a plain text file that contains the `*.fastq` files, one file per line. 
+  `INIP.fa` is the reference sequence in fasta format. `INIP_samples.txt` is a plain text file that contains the `*.fastq` files, one file per line. 
 
-    The `data` folder, is where all the raw `*.fastq` files are stored. 
+  The `data` folder, is where all the raw `*.fastq` files are stored. 
 
-    Note that these files are on your local drive. To run the docker image, we will use the `-v` option in docker to mount the local directory to become a virtual directory on the container. The way to do it is:
+  Note that these files are on your local drive. To run the docker image, we will use the `-v` option in docker to mount the local directory to become a virtual directory on the container. The way to do it is:
 
-    ```bash
-      docker run --rm -v $PWD:/root/data mpileup2matrix [options]
-    ```
+  ```bash
+    docker run --rm -v $PWD:/root/data mpileup2matrix [options]
+  ```
  
 </details>
