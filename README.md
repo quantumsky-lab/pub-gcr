@@ -46,14 +46,48 @@ This is the repository that we use to host some public docker images for utility
     ```
   ### How to run it?
 
-  ### Example of run
+  You can get the helper information by running:
+
+  ```bash
+    docker run --rm mpileup2matrix -h
+  ```
+
+  You will get a print message that looks like this:
+
+    usage: mpileup2matrix.py [-h] --infile-list INFILE_LIST --infile-vol INFILE_VOL --reference REFERENCE [--temp-dir TEMP_DIR] [--keep-temp] --prefix PREFIX [--blastn BLASTN]
+                         [--makeblastdb MAKEBLASTDB] [--trimmomatic TRIMMOMATIC] [--homopolymer HOMOPOLYMER] [--min-map MIN_MAP]
+
+    Run reads mapping with Jorna default settings for genome editing data.
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      --infile-list INFILE_LIST, -i INFILE_LIST
+                            A list of input files in fastq format in text file; if paired-end, they should be in the same line, separated by comma. NOTE: no directory should be supplied.
+      --infile-vol INFILE_VOL, -d INFILE_VOL
+                            directory where the infiles are stored
+      --reference REFERENCE, -r REFERENCE
+                            Reference sequence in fasta format
+      --temp-dir TEMP_DIR, -t TEMP_DIR
+                            Where the intermediate files should live.
+      --keep-temp, -k       Turns on temp dir keeping when specified.
+      --prefix PREFIX, -o PREFIX
+                            Output file prefix
+      --blastn BLASTN       Path to blastn
+      --makeblastdb MAKEBLASTDB
+                            Path to makeblastdb
+      --trimmomatic TRIMMOMATIC
+                            Path to trimmomatic jar
+      --homopolymer HOMOPOLYMER
+                            Homopolymer length threshold
+      --min-map MIN_MAP     Mininum match length threshold
+  
+  ### Example
 
   In the repository,  you will find a folder named `test`, which contains necessary files that you will use to do a test run. The files include:
-    ```bash
+    
     
       test
       ├── INIP.fa
-      ├── INIP.mpileup
       ├── INIP_samples.txt
       └── data
           ├── B1_01.fastq
@@ -63,6 +97,6 @@ This is the repository that we use to host some public docker images for utility
       
       1 directory, 7 files
       
-    ```
+    `INIP.fa` is the reference sequence in fasta format. `INIP_samples
  
 </details>
