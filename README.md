@@ -13,6 +13,7 @@ This is the repository that we use to host some public docker images for utility
   
   ### How to run it?
   
+  <b>Step 1</b>
   Install docker (if you haven't done it) [link to installation page](https://docs.docker.com/engine/install/)
     
     2. Install git (if you haven't done it)
