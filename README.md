@@ -134,8 +134,8 @@ This is the repository that we use to host some public docker images for utility
 
   It should take <1 min to run, and you will get the results in:
 
-    - `INIP_test.mpileup`
-    - `INIP_test_cov.matrix`
-    - `INIP_test_ind.matrix`
+  * `INIP_test.mpileup`
+  * `INIP_test.cov`
+  * `INIP_test.indel`
  
 </details>
