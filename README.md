@@ -22,7 +22,7 @@ This is the repository that we use to host some public docker images for utility
   <b>Step 3</b>
   Run `git clone` of this repository:
        
-       ```bash
-       git clone 
+  ```bash
+    git clone 
        
 </details>
