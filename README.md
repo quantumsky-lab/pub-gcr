@@ -11,7 +11,7 @@ This is the repository that we use to host some public docker images for utility
   ### What does it do?
   mpileup2matrix is a docker image that takes a list of input fastq files from Nanopore sequencer and trims and aligns them against a reference sequence. It will then generate an mpileup file (*.mpileup) and two matrices: one is the coverage matrix and the other is the indel matrix, both are table delimited and on a per position basis.
   
-  ### How to run it?
+  ### How to install it?
   
   <b>Step 1</b>
   Install docker (if you haven't done it) [link to installation page](https://docs.docker.com/engine/install/)
@@ -22,27 +22,45 @@ This is the repository that we use to host some public docker images for utility
   <b>Step 3</b>
   Run `git clone` of this repository:
        
-  ```bash
-    gh repo clone quantumsky-lab/pub-gcr
-  ```
+    ```bash
+      gh repo clone quantumsky-lab/pub-gcr
+    ```
 
   or
 
-  ```bash
-    git clone https://github.com/quantumsky-lab/pub-gcr.git
-  ```
+    ```bash
+      git clone https://github.com/quantumsky-lab/pub-gcr.git
+    ```
 
   <b>Step 4</b>
   Use `cd` to nagivate to `pub-gcr/mpileup2matrix` and run:
 
-  ```bash
-    docker build -t mpileup2matrix .
-  ```
+    ```bash
+      docker build -t mpileup2matrix .
+    ```
 
   If you are using an Apple Silicon device (such as M1/2 chips), then you should run:
 
-  ```bash
-    docker buildx build --platform linux/amd64 -t mpileup2matrix .
-  ```
+    ```bash
+      docker buildx build --platform linux/amd64 -t mpileup2matrix .
+    ```
+  ### How to run it?
+
+  ### Example of run
+
+  In the repository,  you will find a folder named `test`, which contains necessary files that you will use to do a test run. The files include:
+    ```bash
+      test
+      ├── INIP.fa
+      ├── INIP.mpileup
+      ├── INIP_samples.txt
+      └── data
+          ├── B1_01.fastq
+          ├── B2_02.fastq
+          ├── B3_03.fastq
+          └── B4_04.fastq
+      
+      1 directory, 7 files
+    ```
  
 </details>
